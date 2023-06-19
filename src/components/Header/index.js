@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Menu, Button } from 'semantic-ui-react';
+// import { Menu, Button } from 'semantic-ui-react';
+import './index.css'
 
 const Header = () => {
   const [promptEvent, setPromptEvent] = useState(null);
@@ -29,9 +30,11 @@ const Header = () => {
   };
 
   return (
-    <Menu stackable inverted size="massive">
-      <Menu.Item header>
-        <h1 style={{ color: '#2185D0' }}>QuizApp</h1>
+    <div className='main-header'>
+      <h1 className='logo'>PreTrain</h1>
+      <a className='subscribe'>Subscribe</a>
+      {/* <Menu.Item header>
+        <h1 style={{ color: 'white' }}>Exit Exam</h1>
       </Menu.Item>
       {promptEvent && !isAppInstalled && (
         <Menu.Item position="right">
@@ -43,8 +46,8 @@ const Header = () => {
             onClick={installApp}
           />
         </Menu.Item>
-      )}
-    </Menu>
+      )} */}
+    </div>
   );
 };
 

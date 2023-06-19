@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import './index.css'
 import {
   Container,
   Segment,
@@ -113,14 +114,11 @@ const Main = ({ startQuiz }) => {
   if (offline) return <Offline />;
 
   return (
-    <Container>
-      <Segment>
-        <Item.Group divided>
+    <div className='container'>
           <Item>
-            <Item.Image src={mindImg} />
             <Item.Content>
               <Item.Header>
-                <h1>The Ultimate Trivia Quiz</h1>
+                <h1 className='about-us'>Check out our Trivia Quize</h1>
               </Item.Header>
               {error && (
                 <Message error onDismiss={() => setError(null)}>
@@ -215,7 +213,7 @@ const Main = ({ startQuiz }) => {
               <Divider />
               <Item.Extra>
                 <Button
-                  primary
+                  color='#00000033'
                   size="big"
                   icon="play"
                   labelPosition="left"
@@ -226,10 +224,8 @@ const Main = ({ startQuiz }) => {
               </Item.Extra>
             </Item.Content>
           </Item>
-        </Item.Group>
-      </Segment>
-      <br />
-    </Container>
+
+    </div>
   );
 };
 
